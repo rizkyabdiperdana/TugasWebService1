@@ -3,12 +3,6 @@
 
  
 <h3>Daftar Buku Terbaru</h3>
-<?php
-
-$books = new SimpleXMLElement('buku.xml', null, true);
- 
-
-echo "
 <table>
 <tr>
 <th>Judul</th>
@@ -17,22 +11,13 @@ echo "
 <th>Harga</th>
 <th>ISBN</th>
 </tr>
- 
-";
- 
-foreach($books as $buku)
-{
-        echo "
+
 <tr>
-<td width='200'>{$buku->judul}</td>
-<td width='200'>{$buku->pengarang}</td>
-<td width='130'>{$buku->penerbit}</td>
-<td width='80'>\${$buku->harga}</td>
-<td width='130'>{$buku['isbn']}</td>
+<td width='200'>Cara Menalukkan Algoritma</td>
+<td width='200'>Rizky Abdi Perdana</td>
+<td width='130'>Bintang Media</td>
+<td width='80'>90000</td>
+<td width='130'>080-0181202902</td>
 </tr>
- 
-";
-}
-echo '</table>';
-?>
+ </table>
  
