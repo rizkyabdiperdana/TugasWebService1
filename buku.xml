@@ -1,4 +1,13 @@
 <?xml version="1.0"?>
+
+<!DOCTYPE books [
+  <!ELEMENT buku      (#PCDATA)>
+  <!ELEMENT judul     (#PCDATA)>
+  <!ELEMENT pengarang (#PCDATA)>
+  <!ELEMENT penerbit  (#PCDATA)>
+  <!ELEMENT harga     (#PCDATA)>
+]>
+
 <books>
 <buku isbn="978-1594489501">
 <judul>Cara Menaklukkan Algoritma</judul>
