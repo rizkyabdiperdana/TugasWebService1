@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<books>
+<buku isbn="978-1594489501">
+<judul>Cara Menaklukkan Algoritma</judul>
+<pengarang>Rizky Abdi Perdana</pengarang>
+<penerbit>Bintang Media</penerbit>
+<harga>90000</harga>
+</buku>
+</books>
