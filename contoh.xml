@@ -1,0 +1,17 @@
+# TugasWebService1 (XML)
+
+<?xml version="1.0"?>
+<books>
+<buku isbn="978-1594489501">
+<judul>Cara Melupakan Mantan</judul>
+<pengarang>Sabda Alm</pengarang>
+<penerbit>Apa Aja Boleh</penerbit>
+<harga>90000</harga>
+</buku>
+<buku isbn="979-1594329501">
+<judul>1001 Cara Menaklukkan Algoritma</judul>
+<pengarang>Rizky Abdi Perdana</pengarang>
+<penerbit>Aneuk Aceh Punya</penerbit>
+<harga>94000</harga>
+</buku>
+</books>
