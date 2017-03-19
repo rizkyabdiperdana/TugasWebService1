@@ -1,29 +1,53 @@
 # TugasWebService1
 
-<?xml version="1.0"?>
-<books>
-<buku isbn="978-1594489501">
-<judul>Bumi Manusia</judul>
-<pengarang>Pramoedya Ananta Toer</pengarang>
-<penerbit>Lentera Dipantara</penerbit>
-<harga>90000</harga>
-</buku>
-<buku isbn="979-1594329501">
-<judul>Anak Semua Bangsa</judul>
-<pengarang>Pramoedya Ananta Toer</pengarang>
-<penerbit>Lentera Dipantara</penerbit>
-<harga>94000</harga>
-</buku>
-<buku isbn="980-1594489213">
-<judul>Jejak Langkah</judul>
-<pengarang>Pramoedya Ananta Toer</pengarang>
-<penerbit>Lentera Dipantara</penerbit>
-<harga>98000</harga>
-</buku>
-<buku isbn="985-1518789501">
-<judul>Rumah Kaca</judul>
-<pengarang>Pramoedya Ananta Toer</pengarang>
-<penerbit>Lentera Dipantara</penerbit>
-<harga>84000</harga>
-</buku>
-</books>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Daftar Buku</title>
+<!--Bagian CSS untuk Styling Tabel-->
+<style type="text/css">
+          table, th, td
+          {
+               border: 1px solid black;
+          }
+</style>
+</head>
+<body>
+ 
+<h3>Daftar Buku Terbaru</h3>
+<?php
+// untuk meload data xml (buku.xml) dengan cara SimpleXML 
+$books = new SimpleXMLElement('buku.xml', null, true);
+ 
+// menampilkan data ke XML ke dalam tabel HTML
+echo "
+<table>
+<tr>
+<th>Judul</th>
+<th>Pengarang</th>
+<th>Penerbit</th>
+<th>Harga</th>
+<th>ISBN</th>
+</tr>
+ 
+";
+ 
+// melakukan looping penampilan data buku
+foreach($books as $buku)
+{
+        echo "
+<tr>
+<td width='200'>{$buku->judul}</td>
+<td width='200'>{$buku->pengarang}</td>
+<td width='130'>{$buku->penerbit}</td>
+<td width='80'>\${$buku->harga}</td>
+<td width='130'>{$buku['isbn']}</td>
+</tr>
+ 
+";
+}
+echo '</table>';
+?>
+ 
+</body>
+</html>
